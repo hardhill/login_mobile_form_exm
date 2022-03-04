@@ -51,7 +51,7 @@ fun LoginPage(navController: NavController) {
                     modifier = Modifier
                         .width(200.dp)
                         .height(200.dp),
-                    painter = painterResource(id = androidx.core.R.drawable.notification_bg),
+                    painter = painterResource(id = R.drawable.ic_login),
                     contentDescription = "icon login",
                     contentScale = ContentScale.Fit,
                 )
@@ -87,9 +87,10 @@ fun LoginPage(navController: NavController) {
                                     passwordVisibility.value = !passwordVisibility.value
                                 }) {
                                     Icon(
-                                        painter = painterResource(id = R.drawable.ic_eye),
+                                        painter = painterResource(id = R.drawable.ic_eye1),
                                         contentDescription = "password",
                                         tint = if (passwordVisibility.value) Purple500 else Color.Gray,
+                                        modifier = Modifier.size(24.dp)
                                     )
                                 }
                             },

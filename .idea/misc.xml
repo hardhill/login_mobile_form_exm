@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PROJECTS/JetCompose/LoginActivity/app/src/main/res/drawable/ic_eye.xml" value="0.1185" />
+        <entry key="..\:/PROJECTS/JetCompose/LoginActivity/app/src/main/res/drawable/ic_eye1.xml" value="0.1185" />
         <entry key="..\:/PROJECTS/JetCompose/LoginActivity/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2575" />
+        <entry key="..\:/PROJECTS/JetCompose/LoginActivity/app/src/main/res/drawable/ic_login.xml" value="0.1185" />
       </map>
     </option>
   </component>

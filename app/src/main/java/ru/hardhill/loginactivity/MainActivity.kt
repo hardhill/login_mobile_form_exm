@@ -10,6 +10,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import ru.hardhill.loginactivity.ui.theme.LoginActivityTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,27 +20,21 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LoginActivityTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
+                navigatePage()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    LoginActivityTheme {
-        Greeting("Android")
-    }
+fun navigatePage() {
+    val navController = rememberNavController()
+    NavHost(
+        navController = navController,
+        startDestination = "login_page",
+        builder = {
+            composable("login_page", content = { LoginPage(navController = navController)})
+            composable("register_page", content = { RegisterPage(navController = navController) })
+        }
+    )
 }
